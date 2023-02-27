@@ -8,7 +8,7 @@ const {
     deleteUserById,
     addFriend,
     removeFriend,
-} = require('../../controllers/userController');
+} = require('../controllers/userController');
 
 const {
     getThoughts,
@@ -18,7 +18,7 @@ const {
     deleteThoughtById,
     createReaction,
     removeReaction,
-} = require('../../controllers/thoughtController');
+} = require('../controllers/thoughtController');
 
 // User Routes
 
