@@ -30,7 +30,8 @@ router.route('/users/:userId/friends/:friendId').post(addFriend).delete(removeFr
 
 router.route('/thoughts').get(getThoughts).post(createThought);
 router.route('/thoughts/:thoughtId').get(getThoughtById).put(updateThoughtById).delete(deleteThoughtById);
-router.route('/thoughts/:thoughtId/reactions').post(createReaction).delete(removeReaction);
+router.route('/thoughts/:thoughtId/reactions').post(createReaction);
+router.route('/thoughts/:thoughtId/reactions/:reactionId').delete(removeReaction);
 
 module.exports = router;
 
