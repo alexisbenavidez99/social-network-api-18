@@ -33,7 +33,7 @@ THEN I am able to successfully create and delete reactions to thoughts and add a
 ``
 
 ## Preview
-
+[social-network-api.webm](https://user-images.githubusercontent.com/113260005/222977915-3239066f-d8c0-4cd7-82f3-e39dbd0fe67a.webm)
 ## License 
 
 See license in repo
