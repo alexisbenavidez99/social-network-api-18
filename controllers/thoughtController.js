@@ -97,15 +97,16 @@ module.exports = {
     },
     // Remove reaction
     removeReaction(req, res) {
+      console.log(req.params.thoughtId, req.params.reactionId);
         Thought.findOneAndUpdate(
             { _id: req.params.thoughtId },
             { $pull: { reactions: { reactionId: req.params.reactionId } } },
-            { new: true }
+            { runValidators: true, new: true }
         )
         .then((thought) => {
             if (!thought) {
-                res.status(404).json({ message: 'No thought found with this ID' });
-                return;
+            
+              return res.status(404).json({ message: 'No thought found with this ID' });
             }
             res.json(thought);
         })
